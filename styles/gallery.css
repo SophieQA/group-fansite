@@ -1,0 +1,36 @@
+h1 {
+    color:#FF8ACB;
+}
+
+h2 {
+    color:#A277FF;
+}
+
+a {
+    color:#A277FF;
+    text-decoration:none;
+}
+
+body {
+    background-color:#ffe6f9; 
+    text-align:center;
+}
+
+li {
+    display: inline;
+    margin:0 5px;
+}
+
+ul {
+    list-style:none; 
+    padding:0; 
+    margin:0;
+}
+
+main {
+    text-align:center;
+}
+
+footer p {
+    color:#A277FF;
+}
