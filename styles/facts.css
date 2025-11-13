@@ -1,22 +1,24 @@
-/* ===== Global styling ===== */
-:root {
-  --card-radius: 26px;
-  --shadow-soft: 0 8px 20px rgba(0, 0, 0, 0.12);
+/*animated background – “moving pastel sky”*/
+body {
+  background: linear-gradient(135deg, #ffd6f5, #ffe9ff, #fff5d1, #e2d8ff);
+  background-size: 300% 300%;
+  animation: bg-shift 18s ease-in-out infinite;
+}
+
+@keyframes bg-shift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 /* ===== Intro text ===== */
 .intro {
-  max-width: 1000px;
-  margin: 0 auto 1rem;
-  padding: 0 1rem;
   text-align: center;
   font-size: 1.1rem;
 }
 
 /* ===== Card grid ===== */
 .cards-grid {
-  max-width: 1000px;
-  margin: 0 auto 3rem;
   /* add top padding so the top row of cards has breathing room */
   padding: 1.2rem 1.2rem 2rem;
   display: grid;
@@ -25,11 +27,20 @@
   gap: 1.8rem;
 }
 
+.container {
+  box-sizing: border-box; 
+  width: 70%;             
+  margin-left: auto;      
+  margin-right: auto;
+  max-width: 1000px;
+  margin: 0 auto 1.1rem;
+}
+
 /* Base card style */
 .fact-card {
-  border-radius: var(--card-radius);
+  border-radius: 26px;
   padding: 1.2rem 1.4rem;
-  box-shadow: var(--shadow-soft);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
   display: flex;
   flex-direction: column;
   gap: 1rem;
