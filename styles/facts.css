@@ -1,0 +1,83 @@
+/* ===== Global styling ===== */
+:root {
+  --card-radius: 26px;
+  --shadow-soft: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* ===== Intro text ===== */
+.intro {
+  max-width: 1000px;
+  margin: 0 auto 1rem;
+  padding: 0 1rem;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+/* ===== Card grid ===== */
+.cards-grid {
+  max-width: 1000px;
+  margin: 0 auto 3rem;
+  /* add top padding so the top row of cards has breathing room */
+  padding: 1.2rem 1.2rem 2rem;
+  display: grid;
+  /* keep two columns on wider screens */
+  grid-template-columns: repeat(2, minmax(260px, 1fr));
+  gap: 1.8rem;
+}
+
+/* Base card style */
+.fact-card {
+  border-radius: var(--card-radius);
+  padding: 1.2rem 1.4rem;
+  box-shadow: var(--shadow-soft);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  min-width: 260px;
+}
+
+/* Title centered */
+.fact-card h2{
+  text-align: center;
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+/* ===============================
+   INNER LIGHT PANEL
+   =============================== */
+.fact-card .inner-panel {
+  background: rgba(255, 255, 255, 0.65);
+  border-radius: 20px;
+  padding: 1rem 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+/* Text — left side */
+.inner-panel .text {
+  flex: 1;
+  text-align: left;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.inner-panel .image img {
+  width: 130px;
+  height: auto;
+}
+
+/* Card-specific colors */
+.card-yellow { background: #ffe08a; }
+.card-lilac  { background: #e7c9ff; }
+.card-blue   { background: #cfe4ff; }
+.card-pink   { background: #ffc7e0; }
+.card-teal   { background: #b9f3f2; }
+
+/* Image container */
+.card-image {
+  border-radius: 20px;
+  padding: 0.4rem;
+}
