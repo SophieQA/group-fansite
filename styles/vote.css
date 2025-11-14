@@ -47,6 +47,20 @@ a:hover {
 }
 
 
+#vote-title .gradient-text:first-child::before {
+    content: "🌙 "; 
+}
+
+#vote-title .gradient-text:first-child::after {
+    content: "✨";  
+}
+
+#vote-title .gradient-text:last-child::after {
+    content: "❤️";  
+}
+
+
+
 span {
     font-weight: bold;
     font-size: 1rem;
@@ -73,10 +87,6 @@ span {
 
 
 
-.emoji {
-    background: none;
-    color: currentColor;
-}
 
 
 
