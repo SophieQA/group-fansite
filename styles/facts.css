@@ -3,6 +3,26 @@ body {
   background: linear-gradient(135deg, #ffd6f5, #ffe9ff, #fff5d1, #e2d8ff);
   background-size: 300% 300%;
   animation: bg-shift 18s ease-in-out infinite;
+  position: relative;      /* so ::before can be positioned */
+  overflow-x: hidden;      /* avoids scroll bar from decoration */
+}
+
+/* moon wand decoration on the left, behind content */
+body::before {
+  content: "";
+  position: fixed;         /* stays in place while scrolling */
+  bottom: 0;
+  left: 0;
+  width: 50vw;             /* take about half the screen width */
+  height: 100vh;
+
+  background-image: url("../images/facts/Background.png");
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-size: auto 50%;  /* make it tall & pretty */
+  opacity: 0.9;               /* a bit transparent */
+  pointer-events: none;       /* don’t block clicks */
+  z-index: -1;                /* sit behind everything */
 }
 
 @keyframes bg-shift {
@@ -91,4 +111,10 @@ body {
 .card-image {
   border-radius: 20px;
   padding: 0.4rem;
+}
+
+@media (max-width: 600px) {
+  body::before {
+    display: none;
+  }
 }

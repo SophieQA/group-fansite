@@ -8,7 +8,7 @@
     <title>Sailor Moon Power page</title>
     <!-- Link to Style Sheet -->
     <link href="../styles/index.css" rel="stylesheet" />
-    <link href="../styles/gallery.css" rel="stylesheet" />
+    <link href="../styles/power.css" rel="stylesheet" />
 </head>
 
 <body class="body-power-out">
@@ -37,80 +37,125 @@
     </header>
 
     <main>
-        <section class="body-power">
-            <h2>💫Sailor Scout and Our Power World 🪄✨</h2>
-            <article>
-                <figure>
-                    <img src="../images/index/Sailor Alice.png" alt="Sailor Alice" class="sailor-img">
-                    <figcaption>Sailor Alice</figcaption>
+        <section class="power-page">
+            <h2 class="power-title">💫Sailor Scout and Our Power World 🪄✨</h2>
+
+            <p class="power-subtitle">
+            Meet the Ada Moonlight Team – four brave scouts who protect projects
+            from bugs, bad layouts, and failing tests ✨
+            </p>
+
+            <div class="scouts-wrapper">
+
+            <!-- Alice -->
+            <article class="scout-card">
+                <figure class="scout-figure">
+                <img src="../images/index/Sailor Alice.png" alt="Sailor Alice" class="scout-img">
                 </figure>
-                <p style="border:2px solid rgb(238, 68, 24);padding:10px; background-color:#ffe6f2;">
-                    🔥 Sailor Mars — Alice Scout of Frontend Sorcery
+                <div class="scout-text">
+                <h3 class="scout-name">🔥 Sailor Mars – Alice</h3>
+                <p class="scout-role">Scout of Frontend Sorcery</p>
+                <p class="scout-desc">
                     Soft-spoken but powerful — her HTML and CSS spells are unmatched.
-                    She can:
-                    make a button perfectly centered on the first attempt
-                    summon pastel gradients that heal the soul
-                    turn any div into something beautiful, responsive, and magical
-                    Her special move:
-                    “Pretty Layout Beam!” — instantly fixes everyone’s UI disasters.</p>
-                <figure>
-                    <img src="../images/index/Sailor Kate.png" alt="Sailor Ekaterina" class="sailor-img">
-                    <figcaption>Sailor Ekaterina</figcaption>
-                </figure>
-                <p style="border:2px solid rgb(4, 68, 24);padding:10px; background-color:#ffe6f2;">
-                    🪐✨♀️✨Sailor Ekaterina — Scout of Creative Chaos & APIs
-                    Energetic, passionate, and powered by infinite coffee and brave commits.
-                    She can summon the legendary ability to:
-                    make Flask behave on the first try
-                    write an API endpoint so perfect even Postman sheds a tear
-                    style HTML pages with colors “inspired by moonlight… and vibes”
-                    Her transformation phrase:
-                    “Moon Prism API Power — return JSON!”</p>
-                <figure>
-                    <img src="../images/index/Sailor Sophie.png" alt="Sailor Sophie" class="sailor-img">
-                    <figcaption>Sailor Sophie</figcaption>
-                </figure>
-                <p style="border:2px solid rgb(239, 101, 9);padding:10px; background-color:#ffe6f2;">
-                    🌙💖🌟Sailor Sophie — Scout of Documentation & Tests
-                    Wise, kind, and always ready to save the group with the ancient magic known as…
-                    Reading the README.
-                    Her powers allow her to:
-                    write unit tests that expose every hidden bug
-                    create diagrams no one asked for but everyone needed
-                    explain a complex algorithm in gentle teacher-voice
-                    Legend says her test coverage once reached 98%.
-                    The rest was “TODO after lunch.”</p>
-                <figure>
-                    <img src="../images/index/Sailor Li Yan.png" alt="Sailor Li Yan" class="sailor-img">
-                    <figcaption>Sailor Li Yan</figcaption>
-                </figure>
-                <p style="border:2px solid rgb(9, 147, 239);padding:10px; background-color:#ffe6f2;">
-                    🌊💙🐬 Sailor Li Yan — Scout of Debugging Clarity
-                    Calm, logical, and unstoppable once she enters “bug-hunting mode.”
-                    Her power is the ability to see error messages humans were never meant to understand.
-                    With a single wave of her keyboard, she can:
-                    freeze time to read stack traces
-                    summon rubber ducks for team debugging
-                    refactor 200 lines into 3 elegant Python list comprehensions
-                    Her natural enemy: code that “works on my machine.”</p>
-                <figure>
-                    <img src="../images/Our-Sailor-Moon.png" alt="Our-Sailor-Moon" class="sailor-img-wide">
-                    <figcaption>Our-Sailor-Moon</figcaption>
-                </figure>
-                <p style="border:2px solid rgb(239, 220, 9);padding:10px; background-color:#ffe6f2;">
-                    🌙✨💫💖 Together: The ADA Moonlight Team
-                    When combined, their powers allow them to:
-                    defeat merge conflicts
-                    summon passing pytest suites
-                    survive unexpected Slack notifications
-                    protect Ada from evil forces like “Missing Requirements.txt”
-                    Rumor says when all four scouts shout “Moonlight Code Unite!”
-                    — the entire project finally deploys to Render without crashing 🌙💖🪄✨”</p>
+                    She can make a button perfectly centered on the first attempt and
+                    turn any div into something beautiful, responsive, and magical.
+                </p>
+                <p class="scout-powers">
+                    <strong>Powers:</strong> Pastel gradient healing, pixel-perfect layouts,
+                    and her ultimate attack, <em>Pretty Layout Beam</em>, which fixes
+                    everyone’s UI disasters.
+                </p>
+                </div>
             </article>
-            <footer>
-                <p>&copy; 2025 Team E.L.S.A. — Made with ❤️ and Moonlight</p>
+
+            <!-- Ekaterina -->
+            <article class="scout-card">
+                <figure class="scout-figure">
+                <img src="../images/index/Sailor Kate.png" alt="Sailor Ekaterina" class="scout-img">
+                </figure>
+                <div class="scout-text">
+                <h3 class="scout-name">🪐✨♀️✨ Sailor Ekaterina</h3>
+                <p class="scout-role">Scout of Creative Chaos &amp; APIs</p>
+                <p class="scout-desc">
+                    Energetic, passionate, and powered by infinite coffee and brave commits.
+                    She keeps Flask behaving (most of the time) and loves styling pages
+                    with colors inspired by moonlight and vibes.
+                </p>
+                <p class="scout-powers">
+                    <strong>Powers:</strong> Flawless API endpoints, instant JSON responses,
+                    and her transformation phrase, <em>“Moon Prism API Power — return JSON!”</em>
+                </p>
+                </div>
+            </article>
+
+            <!-- Sophie -->
+            <article class="scout-card">
+                <figure class="scout-figure">
+                <img src="../images/index/Sailor Sophie.png" alt="Sailor Sophie" class="scout-img">
+                </figure>
+                <div class="scout-text">
+                <h3 class="scout-name">🌙💖🌟 Sailor Sophie</h3>
+                <p class="scout-role">Scout of Documentation &amp; Tests</p>
+                <p class="scout-desc">
+                    Wise, kind, and always ready to save the group with the ancient magic
+                    known as reading the README. She can explain any algorithm in gentle
+                    teacher-voice.
+                </p>
+                <p class="scout-powers">
+                    <strong>Powers:</strong> Bug-exposing unit tests, beautiful diagrams,
+                    and legendary test coverage that once reached 98% — the rest was
+                    “TODO after lunch.”
+                </p>
+                </div>
+            </article>
+
+            <!-- Li Yan -->
+            <article class="scout-card">
+                <figure class="scout-figure">
+                <img src="../images/index/Sailor Li Yan.png" alt="Sailor Li Yan" class="scout-img">
+                </figure>
+                <div class="scout-text">
+                <h3 class="scout-name">🌊💙🐬 Sailor Li Yan</h3>
+                <p class="scout-role">Scout of Debugging Clarity</p>
+                <p class="scout-desc">
+                    Calm, logical, and unstoppable once she enters bug-hunting mode.
+                    She can read stack traces humans were never meant to understand and
+                    refactor 200 lines into 3 elegant list comprehensions.
+                </p>
+                <p class="scout-powers">
+                    <strong>Powers:</strong> Rubber-duck summoning, fearless refactors,
+                    and a special attack against her natural enemy: code that
+                    “works on my machine.”
+                </p>
+                </div>
+            </article>
+
+            <!-- Team card -->
+            <article class="scout-card team-card">
+                <figure class="scout-figure">
+                <img src="../images/Our-Sailor-Moon.png" alt="Our Sailor Moon Team" class="scout-img-wide">
+                </figure>
+                <div class="scout-text">
+                <h3 class="scout-name">🌙✨💫💖 Together: The ADA Moonlight Team</h3>
+                <p class="scout-desc">
+                    When their powers combine, they can defeat merge conflicts, summon
+                    passing pytest suites, and survive unexpected Slack notifications.
+                </p>
+                <p class="scout-powers">
+                    <strong>Ultimate Power:</strong> When all four scouts shout
+                    <em>“Moonlight Code Unite!”</em> the entire project finally deploys
+                    to Render without crashing 🌙💖🪄✨
+                </p>
+                </div>
+            </article>
+
+            </div>
+
+            <footer class="power-footer">
+            <p>&copy; 2025 Team E.L.S.A. — Made with ❤️ and Moonlight</p>
             </footer>
         </section>
+    </main>
 </body>
 
 </html>
