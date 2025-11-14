@@ -1,0 +1,86 @@
+h1 {
+    color: #FF8ACB;
+}
+
+a {
+    color: #A277FF;
+    text-decoration: none;
+}
+
+li {
+    display: inline;
+    margin: 0 5px;
+}
+
+body {
+    background-color: #ffe6f9;
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+section {
+    background-color: #fff0fa;
+    width: 70%;
+    margin: 0 auto;
+    padding: 10px;
+    border: 1px solid pink;
+}
+
+h2 {
+    color: #A277FF
+}
+
+article {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+figure {
+    margin: 10px;
+    text-align: center;
+}
+
+footer p {
+    color: #A277FF;
+}
+
+.sailor-img {
+    width: 150px;
+    height: 225px;
+}
+
+.sailor-img-wide {
+    height: 300px;
+}
+
+.swap-img {
+    position: relative;
+    width: 150px;
+    height: 225px;
+}
+
+/*stacks both images on top of each other*/
+.swap-img img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: opacity 0.3s ease;
+}
+
+.img-hover {
+    opacity: 0;
+}
+
+.swap-img:hover .img-default {
+    opacity: 0;
+}
+
+.swap-img:hover .img-hover {
+    opacity: 1;
+}
