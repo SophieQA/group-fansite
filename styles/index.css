@@ -59,13 +59,7 @@ footer p {
     height: 300px;
 }
 
-.body-power {
-    background: url('../images/backgroundxinh.jpg')
-}
 
-.body-power-out {
-    background: url('../images/night-star.jpg')
-}
 
 .swap-img {
     position: relative;
@@ -91,4 +85,8 @@ footer p {
 
 .swap-img:hover .img-hover {
     opacity: 1;
+}
+
+.body-power {
+    background-image: url('../images/backgroundxinh.jpg');
 }
