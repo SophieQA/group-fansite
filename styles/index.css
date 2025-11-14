@@ -66,3 +66,29 @@ footer p {
 .body-power-out {
     background: url('../images/night-star.jpg')
 }
+
+.swap-img {
+    position: relative;
+    width: 150px;
+    height: 225px;
+}
+
+/*stacks both images on top of each other*/
+.swap-img img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: opacity 0.3s ease;
+}
+
+.img-hover {
+    opacity: 0;
+}
+
+.swap-img:hover .img-default {
+    opacity: 0;
+}
+
+.swap-img:hover .img-hover {
+    opacity: 1;
+}

@@ -1,0 +1,123 @@
+
+label img {
+    width: 10em;
+    height: 100%;
+}
+
+
+h1 {
+    font-size: 2em;
+    background: linear-gradient(90deg, #ee86ba, #8a2be2, #ff69b4);
+    background-size: 200%;
+    background-clip: text;   
+    -webkit-background-clip: text;
+    color: transparent;      
+    animation: gradientMove 3s infinite linear;
+}
+@keyframes gradientMove {
+    0% { background-position: 0%; }
+    100% { background-position: 200%; }
+}
+
+
+#gradient-text {
+    color:#A277FF;
+    font-size: 2em;
+    background: linear-gradient(90deg, #ee86ba, #8a2be2, #ff69b4);
+    background-size: 200%;
+    background-clip: text;   
+    -webkit-background-clip: text;
+    color: transparent;      
+    animation: gradientMove 3s infinite linear;
+}
+@keyframes gradientMove {
+    0% { background-position: 0%; }
+    100% { background-position: 200%; }
+}
+.emoji {
+    background: none;
+    color: currentColor;
+}
+
+
+
+.candidate {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:0.6em;
+}
+
+fieldset {
+    display: grid;
+    grid-template-columns:  1fr 1fr 1fr 1fr;
+}
+
+span {
+    font-weight: bold;
+    font-size: 1em;
+}
+
+#results-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+button {
+    font-size: 1em;
+    border-radius: 1em;
+    padding: 0.5em;
+    background-color: rgb(225, 148, 221);
+    margin: 1em;
+    box-shadow: 
+        0 2px 4px rgba(0,0,0,0.4),
+        0 6px 15px rgba(0,0,0,0.3);
+    display: inline-block;
+    animation: bounce 1s infinite ease-in-out;
+}
+@keyframes bounce {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); } /* 放大20% */
+}
+
+
+div h2 {
+    font-size: 1.5em;
+    margin-top: 0em;
+    
+}
+
+#logo {
+    width: 15em;
+}
+
+/* header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+} */
+
+
+/* label img {
+    animation: swing 2s ease-in-out infinite;
+    transform-origin: center bottom; /* 摆动中心点 */
+/* } 
+/* 
+@keyframes swing {
+    0% { transform: rotate(-10deg); }
+    50% { transform: rotate(10deg); }
+    100% { transform: rotate(-10deg); }
+}   */
+
+
+label img {
+    position: relative;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%   { top: 0px; }
+    50%  { top: 10px; } 
+    100% { top: 0px; }  
+}
+
