@@ -16,7 +16,7 @@ body::before {
         inset: 0;
         z-index: 0; /* behind page content (which uses z-index:1) */
         pointer-events: none;
-        background-image: url("../images/stars-tile.svg");
+        background-image: url("../images/gallery/stars-tile.svg");
         background-repeat: repeat;
         background-position: 36px 62px;
         /* control the density of the tile here */
