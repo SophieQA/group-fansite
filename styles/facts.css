@@ -5,7 +5,104 @@ body {
   animation: bg-shift 18s ease-in-out infinite;
   position: relative;      /* so ::before can be positioned */
   overflow-x: hidden;      /* avoids scroll bar from decoration */
+  font-family: Georgia, serif;
+  color: #3C2D7C;
+  margin: 0;
 }
+
+header{
+  background-color: #8b6cf1;
+  text-align: center;
+  padding: 1rem 0 0; /* top padding only, no bottom padding so nav sits flush */ 
+}
+
+h1 {
+  color: #F4E48C;
+  font-size: 3rem;
+}
+
+h2 {
+  color: #3C2D7C;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;   /* ← adds spacing between menu items */
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+ul {
+  gap: 2rem;
+}
+
+header nav {
+margin: 0 auto; /* center nav */
+background-color: #634CC0;
+padding: 0.9rem 0; /* vertical padding inside nav */
+}
+
+li, a{
+  font-size: 1.1rem;
+  color: white;
+}
+
+/* Dropdown menu styles */
+.main-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: white;
+  padding: 0.4rem 0.6rem;
+}
+
+nav a.active {
+  font-weight: 700;
+}
+
+.has-dropdown .dropdown a {
+  font-size: 1.1rem;    /* match main menu size */
+}
+
+/* dropdown base (hidden) */
+.has-dropdown {
+  position: relative;
+}
+
+.has-dropdown .dropdown {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 100%;        /* right under the parent li */
+  left: 0;
+  width: 100%;         /* match parent li width */
+  min-width: 160px;
+  background: #634CC0;
+  border-radius: 0.5rem;
+  display: none;    /* hidden by default */
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+.has-dropdown .dropdown li a {
+  display: block;
+  padding: 0.4rem 0.6rem;
+}
+
+/* show dropdown on hover */
+.has-dropdown:hover .dropdown {
+  display: block;
+}
+
 
 /* moon wand decoration on the left, behind content */
 body::before {
@@ -35,6 +132,12 @@ body::before {
 .intro {
   text-align: center;
   font-size: 1.1rem;
+  border-width: 0px;
+  background-color: transparent;
+}
+
+.intro.container {
+  margin-bottom: 0;           /* or 0.3rem if you want a tiny gap */
 }
 
 /* ===== Card grid ===== */
@@ -45,6 +148,8 @@ body::before {
   /* keep two columns on wider screens */
   grid-template-columns: repeat(2, minmax(260px, 1fr));
   gap: 1.8rem;
+  border-radius: 26px;
+  padding-top: 0;
 }
 
 .container {
@@ -54,6 +159,7 @@ body::before {
   margin-right: auto;
   max-width: 1000px;
   margin: 0 auto 1.1rem;
+  border-width: 0px;
 }
 
 /* Base card style */
@@ -106,6 +212,12 @@ body::before {
 .card-blue   { background: #cfe4ff; }
 .card-pink   { background: #ffc7e0; }
 .card-teal   { background: #b9f3f2; }
+
+.card-yellow h2 { color: #019d98; }
+.card-lilac  h2 { color: #2848a0; }
+.card-blue   h2 { color: #3C2D7C; }
+.card-pink   h2 { color: #A72653; }
+.card-teal   h2 { color: #006A5B; }
 
 /* Image container */
 .card-image {
