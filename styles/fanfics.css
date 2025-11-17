@@ -144,6 +144,7 @@ nav a.active {
   max-width: 100%;
   margin: 2rem auto 3rem;
   padding: 1rem;
+  margin: 0 auto;
   text-align: center;
 }
 
@@ -159,6 +160,7 @@ nav a.active {
   grid-template-columns: auto 1fr auto; /* arrows — book — arrows */
   align-items: center;
   width: 100%;  /* full width */
+  margin: 0 auto;
 }
 
 /* ensure no visible border or shadow around the book frame */
@@ -207,6 +209,7 @@ nav a.active {
 .book {
   position: relative;
   width: 90%;
+  margin: 0 auto; 
   aspect-ratio: 3 / 2; /* adjust if your book image is taller/wider */
   background-image: url("../images/fanfics/open-book.png");
   background-size: contain;
