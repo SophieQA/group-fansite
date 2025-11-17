@@ -16,19 +16,20 @@
     50% { transform: scale(1.2); } 
 }
 
-
-@keyframes glow {
-    0%, 100% {
-        text-shadow: 
-            0 0 8px rgba(255, 165, 236, 0.9),
-            0 0 15px rgba(186, 125, 255, 0.7);
-    }
-    50% {
-        text-shadow: 
-            0 0 15px rgba(255, 200, 240, 1),
-            0 0 25px rgba(150, 120, 255, 0.9);
-    }
+/* body */
+body {
+    background-image:  
+    url("../images/vote/bg13.jpg");
+    background-size: cover;      
+    background-position: center; 
 }
+
+
+/* header*/
+#logo {
+    width: 15rem;
+}
+
 
 h1 {
     font-family: "Gill Sans";
@@ -42,42 +43,29 @@ h1 {
 }
 
 
+.pipe {
+    color: rgb(241, 234, 243);
+}
+
 a:hover {
     color: #ff69b4; 
 }
 
 
-#vote-title .gradient-text:first-child::before {
-    content: "🌙 "; 
-}
+/* main */
+.vote-body {
+    border-radius: 50px;
+    max-width: 1200px; 
+    margin: 2rem auto; 
 
-#vote-title .gradient-text:first-child::after {
-    content: "✨";  
-}
-
-#vote-title .gradient-text:last-child::after {
-    content: "❤️";  
 }
 
 
-
-span {
-    font-weight: bold;
-    font-size: 1rem;
-    background: linear-gradient(90deg, #c82525, #8a2be2, #c50f0f);
-    background-size: 200%;
-    background-clip: text;   
-    -webkit-background-clip: text;
-    color: transparent;      
-    animation: gradientMove 3s infinite linear, glow 2s infinite ease-in-out;
-}
-
-
-
+/* title gradientMove and add some icons*/
 .gradient-text {
-    font-size: 1.3rem;
+    font-size: 1.6rem;
     font-weight: 700;
-    background: linear-gradient(90deg, #c82525, #8a2be2, #e1b710);
+    background: linear-gradient(90deg, #c82525, #8a2be2, #da17ad);
     background-size: 200%;
     background-clip: text;   
     -webkit-background-clip: text;
@@ -86,16 +74,37 @@ span {
 }
 
 
+#vote-title .gradient-text::before,
+#vote-title .gradient-text::after {
+    content: "";
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    background-size: contain;        
+    background-position: center;    
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    margin: 0 6px;                    
+}
+
+#vote-title .gradient-text:first-child::before {
+    background-image: url('../images/vote/moon-nobg.jpg');
+}
+#vote-title .gradient-text:last-child::before {
+    background-image: url('../images/vote/cat-nobg.jpg');
+}
+#vote-title .gradient-text:last-child::after {
+    background-image: url('../images/vote/heart-nobg.jpg');
+}
 
 
-
-
+/* candidate cards */
 .candidate {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap:0.6rem;
-    border: #f5f4f5 5px solid;
+    border: 5px solid #f5f4f5;
     border-radius: 10px;
     background-color: rgb(239, 216, 234);
     box-shadow:
@@ -109,49 +118,7 @@ span {
     box-shadow:
         0 4px 10px rgba(255, 20, 147, 0.4),
         0 8px 20px rgba(138, 43, 226, 0.3);
-    border-color: #ffb3e6;
-}
-
-fieldset {
-    display: grid;
-    grid-template-columns:  1fr 1fr 1fr 1fr;
-    border-radius: 30px;
-    border-style:dashed;
-    border: 8px dashed #ebaed7;
-    gap:1rem;
-}
-
-
-
-
-#results-list {
-    font-size: 1.2rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-}
-
-button {
-    font-size: 1.3rem;
-    border-radius: 20px;
-    padding: 0.5rem;
-    background-color: rgb(225, 148, 221);
-    margin: 1rem;
-    box-shadow: 
-        0 2px 4px rgba(0,0,0,0.4),
-        0 6px 15px rgba(0,0,0,0.3);
-    display: inline-block;
-    animation: bounce 2s infinite ease-in-out;
-}
-
-
-
-div h2 {
-    font-size: 1.8rem;
-    margin-top: 0em;
-}
-
-#logo {
-    width: 15rem;
+    border-color: #992b74;
 }
 
 
@@ -163,23 +130,66 @@ label img {
 }
 
 
-
-
-body {
-    background-image:  
-    url("../images/vote/bg13.jpg");
-    background-size: cover;      
-    background-position: center; 
+.sailor-name {
+    color: rgb(129, 13, 123);
+    font-size: 1.3rem;
+    font-weight: bold;
 }
 
-section {
-    border-radius: 50px;
-    max-width: 1200px; 
-    margin: 2rem auto; 
 
+/* form: layout grid */
+fieldset {
+    display: grid;
+    grid-template-columns:  1fr 1fr 1fr 1fr;
+    border-radius: 30px;
+    border-style:dashed;
+    border: 8px dashed #ebaed7;
+    gap:1rem;
 }
 
-div ul li {
+
+button {
+    font-size: 1.3rem;
+    border-radius: 10px;
+    padding: 0.5rem;
+    background-color: rgb(225, 148, 221);
+    margin: 1rem;
+    box-shadow: 
+        0 2px 4px rgba(0,0,0,0.4),
+        0 6px 15px rgba(0,0,0,0.3);
+    display: inline-block;
+    animation: bounce 2s infinite ease-in-out;
+}
+
+
+/* section  result layout: grid  */
+#result {
+    border: 8px dashed #ebaed7;
+    border-radius: 30px;
+    background-color:#fff0fa;
+    margin: 0px;
+    padding: 0px;
+    width: 99%;
+}
+
+
+#result-title {
+    font-size: 2rem;
+    margin:auto;
+    font-weight: bolder;
+}
+
+
+#results-list {
+    font-size: 1.2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin:1rem;
+}
+
+
+.vote-result {
+    color:rgb(83, 23, 62);
     padding:0.3rem;
     border-radius: 30px;
     border: 3px dashed #ebaed7;
@@ -190,4 +200,3 @@ div ul li {
     text-align: center;
     margin: 0.5rem;
 }
-
