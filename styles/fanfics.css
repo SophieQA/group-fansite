@@ -141,10 +141,10 @@ nav a.active {
 
 /* Main comic area */
 .comic-wrapper {
-  max-width: 100%;
-  margin: 2rem auto 3rem;
+  width: 100%;
+  max-width: 1500px;
+  margin: 2rem auto 3rem;  /* ✔ restore spacing above the book */
   padding: 1rem;
-  margin: 0 auto;
   text-align: center;
 }
 
